@@ -1,0 +1,100 @@
+/2-1/
+
+2.
+db.getCollection('mails').count()
+5929
+
+3.
+db.mails.find({"sender" : { $regex: /@enron.com$/ }}).count()
+
+4.
+db.mails.find({"subject" : { $regex: /^FW:/, $options : 'i' }}).count()
+db.mails.count({"subject" : { $regex: /^FW:/i }})
+
+5.
+db.mails.explain('executionStats').count({"subject" : { $regex: /^FW:/i }})
+0 ms
+
+6.
+db.mails.createIndex( { subject: 1 } )
+
+7.
+db.mails.explain('executionStats').count({"subject" : { $regex: /^FW:/i }})
+11 ms
+
+8.
+db.mails.find({ to: "rosalee.fleming@enron.com" }, {date: 1, sender: 1, subject: 1})
+
+9
+db.mails.remove({ to: "lizard_ar@yahoo.com​" })
+
+10
+db.mails.insert({sender: "rosalee.fleming@enron.com​"}, {to: "​rob.bradley@enron.com​"})
+
+ ​
+/2-2/
+
+1.
+db.zips.find({ state : "CA"}).sort( { pop: -1 } ).limit(10)
+db.zips.find({ state : "LA"}).sort( { pop: -1 } ).limit(10)
+
+2.
+db.zips.find({ state : "CA"}).sort( { pop: -1 } ).limit(10).skip(10)
+db.zips.find({ state : "LA"}).sort( { pop: -1 } ).limit(10).skip(10)
+
+3.
+db.zips.aggregate( [
+        {
+           $addFields: {
+              "country": "USA"
+           }
+        }
+   ] )
+
+4.
+db.zips.find({$and: [{$pop: {$gt: 100000}}, {"loc.0": {$lt: -74.000000}}]})
+
+
+db.zips.find({pop: {$gt: 100000}, "loc.0": {$lt: -74.000000}})
+
+5.
+db.zips.createIndex( { loc : "2dsphere" } )
+
+db.zips.find(
+    {
+        loc: 
+        {
+            $near:
+            {
+                $geometry: { type: "Point",  coordinates: [ -73.996705, 40.74838 ] },
+                $minDistance: 1000,
+                $maxDistance: 5000
+            }
+        }
+    }
+)
+
+6.
+db.zips.find(
+    {
+        loc: 
+        {
+            $near:
+            {
+                $geometry: { type: "Point",  coordinates: [ -73.996705, 40.74838 ] },
+                $maxDistance: 5000
+            }
+        }
+    }
+)
+
+7.
+db.zips.aggregate([
+  {$group: {_id: "$city", totalPop: {$sum: "$pop"}}},
+  {$match: {totalPop: {$gt: 500000}}}
+])
+
+8.
+- La synthaxe est mauvaise
+- Il ignore la requête
+- > db.zips.find({city:{$regex: /^N/}})

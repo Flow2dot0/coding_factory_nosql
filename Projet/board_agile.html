@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/default.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+
+    <title>CF - NoSQL</title>
+</head>
+<body class="container-fluid pl-0 pr-0 mt-5">
+    <div class="row">
+        <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="board_agile.html">Board Agile</a>
+                            </li>
+            
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="req_classic.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Requête classique
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="req_classic.html#r-1">I : Find()/Activite</a>
+                                <a class="dropdown-item" href="req_classic.html#r-2">II : Find()/DepWithId</a>
+                                <a class="dropdown-item" href="req_classic.html#r-3">III : Updatemany()/Activite</a>
+                                <a class="dropdown-item" href="req_classic.html#r-4">IV : Remove()/Doc</a>
+                                <a class="dropdown-item" href="req_classic.html#r-5">V : Insertmany()/Doc</a>
+                            </div>
+                            </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="req_comp.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Requête complexe
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="req_comp.html#rc-1">I : Count()/Dep</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-2">II : Aggregate()/10 1er Dep</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-3">III : Aggregate()/ 10 villes</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-4">VI : Explain()/stat Requête</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-5">V : CreateIndex()/villes</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-6">VI : Update()/Pays</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-7">VII : Aggregate()/Nb équipement identiques</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-8">VIII : Find()/ Activité Football</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-9">IX : Aggregate()/Trie de A à Z</a>
+                            <a class="dropdown-item" href="req_comp.html#rc-10">X : Remove()/ChampDoc</a>
+                        </div>
+                            </li>
+
+
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="req_bonus.html" id="navbarDropdownMenuLink"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Requête bonus
+                      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="req_bonus.html#rb-1">I : ReplaceOne()</a>
+                      <a class="dropdown-item" href="req_bonus.html#rb-2">II : Distinct()</a>
+                      <a class="dropdown-item" href="req_bonus.html#rb-3">III : BulkWrite()</a>
+                      <a class="dropdown-item" href="req_bonus.html#rb-4">VI : MapReduce()</a>
+                    </div>
+                  </li>
+    
+                          </ul>
+                        </div>
+                      </nav>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-12 p-5 border-bottom rounded">
+                
+                <button type="button" class="btn btn-outline-secondary btn-lg mb-4" id="#rc-1"><h2>SCRUM ?</h2></button>
+                <legend class="mb-3"><span style="font-weight: bold;">Outils :</span> nous avons préféré l'utilisation de <a href="https://trello.com/b/vFMMfJTO/cf-nosql" target="_blank">Trello.com</a> pour son avantage de Clouding</legend>
+                <div class="border rounded" style="color: white;">
+                        <img src="./assets/img/trello.png" alt="" width="100%">
+                </div>
+                
+
+                <div>
+                    <!-- RESERVED TO GRAPHICS EXCELS (OPTIONAL) -->
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- body -->
+        </div>
+    </div>
+       
+    <footer class="bg-primary row d-flex flex-row justify-content-around p-3">
+                            
+                                        
+        <div class="col-2 d-flex text-center">
+            <a href="https://github.com/Flow2dot0"  style="color: white !important;" target="_blank">
+                <img class="git" src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67" alt="">                                        <h4>Florian Gustin</h4>
+            </a>
+        </div>
+        <div class="col-2 d-flex text-center">
+            <a href="https://github.com/DoryanLievre" style="color: white !important;" target="_blank">
+                <img class="git" src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67" alt="">                                        <h4>Doryan Lièvre</h4>
+            </a>
+        </div>
+        <div class="col-2 d-flex text-center">
+            <a href="https://github.com/CedricLphn" style="color: white !important;" target="_blank">
+                <img class="git" src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67" alt="">                                        <h4>Cedric Leprohon</h4>
+            </a>
+        </div>
+        <div class="col-2 d-flex text-center">
+            <a href="" style="color: white !important;" target="_blank">
+                <img class="git" src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67" alt="">                                        <h4>Karim Abdelhadi </h4>
+            </a>
+        </div>    
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
